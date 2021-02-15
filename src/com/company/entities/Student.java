@@ -68,6 +68,34 @@ public class Student {
         return group;
     }
 
+    public void setSurname(String surname) {
+        this.surname = surname;
+    }
+
+    public void setName(String name) {
+        this.name = name;
+    }
+
+    public void setLastName(String lastName) {
+        this.lastName = lastName;
+    }
+
+    public void setBirth(Calendar birth) {
+        this.birth = birth;
+    }
+
+    public void setCourse(int course) {
+        this.course = course;
+    }
+
+    public void setGroup(int group) {
+        this.group = group;
+    }
+
+    public void setFaculty(String faculty) {
+        this.faculty = faculty;
+    }
+
     public Student[] getStudentsFaculty() {
         return studentsFaculty;
     }
@@ -75,31 +103,31 @@ public class Student {
     public void showInfo(String faculty) {
         for (Student student : getStudentsFaculty()) {
             if (student.getFaculty().equals(faculty))
-                System.out.println(student.getName()
-                        + " " + student.getSurname()
-                        + " " + student.getLastName()
-                        + " " + student.getFaculty());
+                System.out.println(student.name
+                        + " " + student.surname
+                        + " " + student.lastName
+                        + " " + student.faculty);
         }
     }
 
     public void showInfo(String faculty, int course) {
         for (Student student : getStudentsFaculty()) {
             if (student.getFaculty().equals(faculty) && student.getCourse() == course)
-                System.out.println(student.getName()
-                        + " " + student.getSurname()
-                        + " " + student.getLastName()
-                        + " " + student.getFaculty()
-                        + " " + student.getCourse());
+                System.out.println(student.name
+                        + " " + student.surname
+                        + " " + student.lastName
+                        + " " + student.faculty
+                        + " " + student.course);
         }
     }
 
     public void showInfo(Calendar year) {
         for (Student student : getStudentsFaculty()) {
             if (student.getBirth().compareTo(year) > 0) {
-                System.out.println(student.getName()
-                        + " " + student.getSurname()
-                        + " " + student.getLastName()
-                        + " " + student.getBirth().getTime());
+                System.out.println(student.name
+                        + " " + student.surname
+                        + " " + student.lastName
+                        + " " + student.birth.getTime());
             }
         }
     }
@@ -107,10 +135,10 @@ public class Student {
     public void showInfo(int group) {
         for (Student student : getStudentsFaculty()) {
             if (student.getGroup() == group) {
-                System.out.println(student.getName()
-                        + " " + student.getSurname()
-                        + " " + student.getLastName()
-                        + " " + student.getGroup());
+                System.out.println(student.name
+                        + " " + student.surname
+                        + " " + student.lastName
+                        + " " + student.group);
             }
         }
     }

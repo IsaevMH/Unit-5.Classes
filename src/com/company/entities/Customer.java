@@ -17,9 +17,9 @@ public class Customer {
 
     public Customer(){
         customers = new Customer[]{
-                new Customer(1, "Андреев", "Андрей", "Андреевич", "Москва", "4214 5231 4231 4234" , "5473 2742"),
-                new Customer(2, "Бабаев", "Антон", "Анатольевич", "Санкт-Петербург", "4414 5600 3131 2134" , "1234 2742"),
-                new Customer(2, "Коломин", "Валерий", "Васильевич", "Пятигорск", "4514 5631 2241 2030" , "1432 2142")
+                new Customer(1, "Андреев", "Андрей", "Андреевич", "Москва", "4214523142314234" , "54732742"),
+                new Customer(2, "Бабаев", "Антон", "Анатольевич", "Санкт-Петербург", "4414560031312134" , "12342742"),
+                new Customer(2, "Коломин", "Валерий", "Васильевич", "Пятигорск", "4514563122412030" , "14322142")
         };
     }
     public Customer(int id, String surname, String name, String lastName, String address, String creditCardNumber, String bankAccountNumber) {
@@ -48,6 +48,22 @@ public class Customer {
         return creditCardNumber;
     }
 
+    public void setSurname(String surname) {
+        this.surname = surname;
+    }
+
+    public void setName(String name) {
+        this.name = name;
+    }
+
+    public void setLastName(String lastName) {
+        this.lastName = lastName;
+    }
+
+    public void setCreditCardNumber(String creditCardNumber) {
+        this.creditCardNumber = creditCardNumber;
+    }
+
     public void getInfo() {
         Arrays.sort(customers, new Comparator<Customer>() {
             @Override
@@ -56,9 +72,9 @@ public class Customer {
             }
         });
         for(int i=0; i < customers.length; i++){
-            System.out.println(customers[i].getSurname()
-                    + " " + customers[i].getName()
-                    + " " + customers[i].getLastName());
+            System.out.println(customers[i].surname
+                    + " " + customers[i].name
+                    + " " + customers[i].lastName);
         }
     }
     public void getInfo(BigInteger start, BigInteger end){
