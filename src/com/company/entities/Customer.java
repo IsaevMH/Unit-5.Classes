@@ -1,7 +1,8 @@
 package com.company.entities;
-import javax.swing.*;
+
 import java.math.BigInteger;
 import java.util.Arrays;
+import java.util.Comparator;
 
 public class Customer {
 
@@ -48,6 +49,24 @@ public class Customer {
     }
 
     public void getInfo() {
+        Arrays.sort(customers, new Comparator<Customer>() {
+            @Override
+            public int compare(Customer o1, Customer o2) {
+                return o1.getSurname().compareTo(o2.getSurname());
+            }
+        });
         System.out.println(Arrays.toString(customers));
+    }
+    public void getInfo(BigInteger start, BigInteger end){
+        for (Customer customer : customers) {
+            if(customer.getCreditCardNumber().compareTo(start.toString()) >= 0
+                    && customer.getCreditCardNumber().compareTo(end.toString()) <= 0){
+                System.out.println(customer.surname
+                        + " " + customer.name
+                        + " " + customer.lastName
+                        + " " + customer.creditCardNumber);
+            }
+
+        }
     }
 }

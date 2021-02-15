@@ -9,5 +9,6 @@ public class Main {
     public static void main(String[] args){
         TaskOne taskOne = new TaskOne();
         taskOne.RunTaskOne();
+        
     }
 }
