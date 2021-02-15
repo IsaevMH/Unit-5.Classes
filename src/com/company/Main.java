@@ -1,14 +1,13 @@
 package com.company;
 
-import com.company.entities.Student;
 import com.company.task1.TaskOne;
-import com.company.task2.taskTwo;
-import java.util.GregorianCalendar;
+import com.company.task2.TaskTwo;
 
 public class Main {
     public static void main(String[] args){
-        TaskOne taskOne = new TaskOne();
-        taskOne.RunTaskOne();
-        
+        //TaskOne taskOne = new TaskOne();
+        //taskOne.RunTaskOne();
+        TaskTwo taskTwo = new TaskTwo();
+        taskTwo.runTaskTwo();
     }
 }

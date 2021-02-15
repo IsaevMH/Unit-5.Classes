@@ -18,8 +18,8 @@ public class Customer {
     public Customer(){
         customers = new Customer[]{
                 new Customer(1, "Андреев", "Андрей", "Андреевич", "Москва", "4214 5231 4231 4234" , "5473 2742"),
-                new Customer(2, "Бабаев", "Антон", "Анатольевич", "Санкт-Петербург", "4214 5600 3131 2134" , "1234 2742"),
-                new Customer(2, "Коломин", "Валерий", "Васильевич", "Пятигорск", "4214 5631 2241 2030" , "1432 2142")
+                new Customer(2, "Бабаев", "Антон", "Анатольевич", "Санкт-Петербург", "4414 5600 3131 2134" , "1234 2742"),
+                new Customer(2, "Коломин", "Валерий", "Васильевич", "Пятигорск", "4514 5631 2241 2030" , "1432 2142")
         };
     }
     public Customer(int id, String surname, String name, String lastName, String address, String creditCardNumber, String bankAccountNumber) {
@@ -55,7 +55,11 @@ public class Customer {
                 return o1.getSurname().compareTo(o2.getSurname());
             }
         });
-        System.out.println(Arrays.toString(customers));
+        for(int i=0; i < customers.length; i++){
+            System.out.println(customers[i].getSurname()
+                    + " " + customers[i].getName()
+                    + " " + customers[i].getLastName());
+        }
     }
     public void getInfo(BigInteger start, BigInteger end){
         for (Customer customer : customers) {

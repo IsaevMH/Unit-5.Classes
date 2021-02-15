@@ -4,10 +4,10 @@ import com.company.entities.Customer;
 
 import java.math.BigInteger;
 
-public class taskTwo {
+public class TaskTwo {
     public void runTaskTwo(){
         Customer customer = new Customer();
         customer.getInfo();
-        customer.getInfo(new BigInteger("40000000000000"), new BigInteger("50000000000000"));
+        customer.getInfo(new BigInteger("420000000000000"), new BigInteger("430000000000000"));
     }
 }
